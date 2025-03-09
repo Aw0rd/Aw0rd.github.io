@@ -16,7 +16,7 @@ document.addEventListener("pjax:success", initScrollReveal);
 <meta property="og:description" content="B. Gold Medal题目：这一周非常忙碌！这个周末，将有 n 场编程竞赛同时进行。 每场竞赛会根据参赛队伍的数量发放金牌。具体来说，每场竞赛会根据每 k 支队伍发放一枚金牌。也就是说，如果一场竞赛有 t 支队伍参加，那么这场竞赛会发放 ⌊ t &#x2F; k ⌋ 枚金牌，其中 ⌊ x ⌋ 表示不超过 x 的最大整数（即向下取整）。 目前，每场竞赛的参赛队伍数量为 ai。 宝宝是某大学的教练">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-09T03:54:41.000Z">
-<meta property="article:modified_time" content="2025-03-09T05:12:37.492Z">
+<meta property="article:modified_time" content="2025-03-09T05:18:19.808Z">
 <meta property="article:author" content="Aword">
 <meta property="article:tag" content="icpc">
 <meta property="article:tag" content="邀请赛">
@@ -56,7 +56,7 @@ IconifyProviders = {
 <hr>
 <h2 id="A-Two-star-Contest"><a href="#A-Two-star-Contest" class="headerlink" title="A. Two-star Contest"></a>A. Two-star Contest</h2><p><strong>题目</strong>：<br>由于各种原因，教育专家将对 <strong>n</strong> 项竞赛进行评级。专家们已经确定了每项竞赛的评级，其中第 <strong>i</strong> 项竞赛被评为 <strong>si</strong> 星级竞赛。</p>
 <p>据说，每项比赛都是根据 <strong>m</strong> 个属性来评定的，其中第 <strong>i</strong> 次比赛的 <strong>j</strong> 个属性表示为 <strong>pi,j</strong>，其值范围为 <strong>0</strong> 至 <strong>k</strong>（均包括在内）。一项竞赛的得分是由其所有 <strong>m</strong> 属性的总和计算得出的。也就是说，假设 <strong>vi</strong> 是第 <strong>i</strong> 项竞赛的得分，那么我们就得到了：</p>
-<p>$$v_i &#x3D; \sum_{j&#x3D;1}^m p_{i,j}$$</p>
+<p>$$ v_i &#x3D; \sum_{j&#x3D;1}^m p_{i,j} $$</p>
 <p>星级越多，得分自然越高。专家们要求，对于任意两个竞赛 <strong>1 ≤ i, j ≤ n</strong>，如果有 <strong>si &gt; sj</strong>，那么一定有 <strong>vi &gt; vj</strong>。</p>
 <p>不幸的是，专家们忘记收集某些竞赛的某些（甚至全部）属性值。作为专家的助手，你需要补上缺失的值，以便上述约束条件在任意两个竞赛中都成立。</p>
 <p><strong>思路</strong>：<br>这道题的解法可以采用排序和贪心的策略。首先按照竞赛的星级 <strong>si</strong> 对竞赛进行排序，同时记录每项竞赛的原始索引。然后我们用一个数组记录每项竞赛已知的得分和未评定的部分。接着按 <strong>si</strong> 从大到小处理这些竞赛，对于每项竞赛：</p>
